@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Montserrat+Alternates:wght@300;400;500&family=Ubuntu:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.container { 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('bg-image.jpg');
+}
+
+.card {
+    background: #000000d0;
+    /* border: 1px solid black; */
+    padding: 1.5rem 2rem;
+    border-radius: 10%;
+    width: 100%;
+    height: 350px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.search {
+    width: 100%;
+    /* background: red; */
+    position: relative;
+    /* top: -50px; */
+    height: 2.5rem;
+
+}
+
+.search .searchBar {
+    width: 85%;
+    height: 100%;
+    border-radius: 2rem;
+    font-family: 'B612 Mono';
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: .7rem;
+    position: absolute;
+    color: rgb(231, 231, 231);
+    background: #7c7c7c2b;
+    
+}
+
+.search .searchBtn {
+    height: 100%;
+    width: 12%;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    background: #7c7c7c2b;
+    border-radius: 50%;
+    transition: .3s;
+
+}
+
+.search .searchBtn:hover {
+    background: #7c7c7c7b;
+}
+
+.weather-info {
+    width: 100%;
+    height: 250px;
+    /* background: red; */
+    position: absolute;
+    padding: 2rem 2rem;
+    bottom: 1rem;
+}
+
+.current-city {
+    font-family: 'Montserrat Alternates';
+    font-weight: 500;
+    position: relative;
+    bottom: 30px;
+    color: rgb(231, 231, 231);
+    font-size: 1.7rem;
+    margin-bottom: .7rem;
+    text-transform: uppercase;
+}
+
+.temp {
+    color: #fff;
+    font-family: 'Montserrat Alternates';
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    top: -15px;
+}
+
+.desc, .humidity, .wind-speed {
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    position: relative;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+
+}
+
+.humidity, .wind-speed {
+    margin-bottom: 1rem;
+}
+
+.weather-info.load {
+    visibility: hidden;
+}
+
+.card.load {
+    height: 90px;
+    border-radius: 50px;
+}
